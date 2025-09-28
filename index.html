@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engine Repair</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Главное меню -->
+        <div id="menu">
+            <h1 class="title">Engine Repair</h1>
+            <button class="btn" id="play-btn">Играть</button>
+            <button class="btn sound" id="sound-btn">🔊 Звук Вкл</button>
+        </div>
+        
+        <!-- Меню выбора сложности -->
+        <div id="difficulty-menu">
+            <h2 class="difficulty-title">Выберите уровень сложности</h2>
+            <button class="btn difficulty-btn" data-level="easy">Техническое обслуживание</button>
+            <button class="btn difficulty-btn" data-level="medium">Текущий ремонт</button>
+            <button class="btn difficulty-btn" data-level="hard">Капитальный ремонт</button>
+            <button class="btn back-btn">Назад</button>
+        </div>
+        
+        <!-- Кнопка паузы -->
+        <button id="pause-btn">⏸️</button>
+        
+        <!-- Счетчик запчастей -->
+        <div id="score-display">
+            <div class="score-icon"></div>
+            <span id="score-text">0/100</span>
+        </div>
+        
+        <!-- Меню паузы -->
+        <div id="pause-menu">
+            <h2 class="pause-title">Пауза</h2>
+            <button class="btn" id="resume-btn">Продолжить</button>
+            <button class="btn sound" id="pause-sound-btn">🔊 Звук Вкл</button>
+        </div>
+        
+        <!-- Обратный отсчет -->
+        <div id="countdown"></div>
+        
+        <!-- Экран завершения -->
+        <div id="game-over">
+            <h2 class="result-title" id="result-title">Победа!</h2>
+            <img id="result-image" class="result-image" alt="Результат">
+            <button class="btn" id="restart-btn">Играть снова</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
